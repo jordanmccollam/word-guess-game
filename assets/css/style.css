@@ -1,0 +1,57 @@
+body {
+    background: url(https://image.freepik.com/free-vector/pattern-with-black-stars-white-background_1110-366.jpg);
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.white-bg {
+    background: white;
+}
+
+.header-container img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.header-container {
+    background-image: url(https://img.pngio.com/joshs-journey-disney-world-2014-disney-world-png-banner-1375_300.png);
+    background-position: center;
+    height: 300px;
+}
+
+/* Not Using currently */
+.header-logo .hang-header {
+    font-size: 150px;
+    font-weight: 700;
+    /* position: absolute;
+    bottom: 70px;
+    left: 150px; */
+}
+
+header .hang-header h1 {
+    font-size: 130px;
+}
+header .hang-header-sm h1 {
+    font-size: 75px;
+}
+
+
+/* not using currently */
+.header-logo .man-header {
+    font-size: 150px;
+    font-weight: 700;
+    /* position: absolute;
+    bottom: 70px;
+    right: 235px; */
+}
+
+.song-image {
+    float: left;
+}
+
+.content-space {
+    float: right;
+}

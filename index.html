@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disney Hangman</title>
+    <!-- JS -->
+    <script src="assets/javascript/game.js"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container-fluid mb-5 header-container">
+            <div class="row">
+                    <div class="col-6 text-center text-light hang-header d-none d-md-block">
+                    <h1>HANG</h1>
+                    </div>
+                    <div class="col-6 text-center text-light hang-header d-none d-md-block">
+                        <h1>MAN</h1>
+                    </div>
+
+                    <div class="col-6 text-center text-light hang-header-sm d-md-none">
+                    <h1>HANG</h1>
+                    </div>
+                    <div class="col-6 text-center text-light hang-header-sm d-md-none">
+                        <h1>MAN</h1>
+                    </div>
+                
+                <!-- <div class="col-12">
+                    <img class="header-bg" src="assets/images/disney-banner.png" alt="disney banner">
+                    <div class="text-block header-logo">
+                        <div class="row">
+                            <div class="col-6 text-center text-light">
+                                <h1 class="hang-header">HANG</h1>   
+                            </div>
+                            <div class="col-6 text-center text-light">
+                                <h1 class="man-header">MAN</h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE / CONTENT -->
+    <div class="container">
+    <div class="page">
+        <div class="container white-bg p-5 border border-primary text-center">
+            <div class="row">
+                <!-- <div class="col-12"> -->
+                    <div class="col-12 col-lg-4 d-none d-lg-block">
+                        <img class="song-image border-right border-warning pr-5 pl-4 pb-4" src="assets/images/genie.png" alt="">
+                    </div>
+
+                    <div class="col- 12 col-lg-8 content-space">
+                        <p>Press any key to get started!</p> 
+                        <br>
+                        <p>Wins: <span id="winCount">0</span></p>
+                        <br>
+                        <p>Current Word
+                            <br>
+                            <span id="currentWord"></span></p>
+                        <br>
+                        <p>Number of guesses remaining: <span id="guessNumber">13</span></p>
+                        <br>
+                        <p>Letter's already guessed: 
+                            <span id="pastGuesses"></span>
+                        </p> 
+                    </div>
+                    
+                </div>
+                <!-- PICTURE THAT WILL CHANGE WITH GUESSED WORDS -->
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
