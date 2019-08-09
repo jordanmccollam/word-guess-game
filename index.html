@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Disney Hangman</title>
+    <!-- JQUERY -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <!-- JS -->
     <script src="assets/javascript/game.js"></script>
     <!-- Bootstrap CDN -->
@@ -32,31 +37,15 @@
                     <div class="col-6 text-center text-light hang-header-sm d-md-none">
                         <h1>MAN</h1>
                     </div>
-                
-                <!-- <div class="col-12">
-                    <img class="header-bg" src="assets/images/disney-banner.png" alt="disney banner">
-                    <div class="text-block header-logo">
-                        <div class="row">
-                            <div class="col-6 text-center text-light">
-                                <h1 class="hang-header">HANG</h1>   
-                            </div>
-                            <div class="col-6 text-center text-light">
-                                <h1 class="man-header">MAN</h1>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div> -->
             </div>
         </div>
     </header>
 
     <!-- PAGE / CONTENT -->
-    <div class="container">
+    <div class="container mb-5">
     <div class="page">
         <div class="container white-bg p-5 border border-primary text-center">
             <div class="row">
-                <!-- <div class="col-12"> -->
                     <div class="col-12 col-lg-4 d-none d-lg-block">
                         <img class="song-image border-right border-warning pr-5 pl-4 pb-4" src="assets/images/genie.png" alt="">
                     </div>
@@ -64,22 +53,21 @@
                     <div class="col- 12 col-lg-8 content-space">
                         <p>Press any key to get started!</p> 
                         <br>
-                        <p>Wins: <span id="winCount">0</span></p>
+                        <p>Wins: <span id="winCount"></span></p>
                         <br>
-                        <p>Current Word
+                        <p>Current Word</p>
+                        <br>
+                        <h2 id="currentWord" class="text-warning"></h2>
+                        <br>
+                        <p>Number of guesses remaining: <span id="guessNumber"></span></p>
+                        <br>
+                        <p>Letter's already guessed:
                             <br>
-                            <span id="currentWord"></span></p>
-                        <br>
-                        <p>Number of guesses remaining: <span id="guessNumber">13</span></p>
-                        <br>
-                        <p>Letter's already guessed: 
-                            <span id="pastGuesses"></span>
+                            <span id="wrongGuesses"></span>
                         </p> 
                     </div>
                     
                 </div>
-                <!-- PICTURE THAT WILL CHANGE WITH GUESSED WORDS -->
-                
             </div>
         </div>
     </div>

@@ -55,3 +55,7 @@ header .hang-header-sm h1 {
 .content-space {
     float: right;
 }
+
+h2 {
+    font-weight: bolder;
+}
