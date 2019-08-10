@@ -48,8 +48,9 @@ header .hang-header-sm h1 {
     right: 235px; */
 }
 
-.song-image {
+.hint-image {
     float: left;
+    width: 200px;
 }
 
 .content-space {

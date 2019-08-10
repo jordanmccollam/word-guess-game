@@ -1,11 +1,20 @@
 $(document).ready(function() {
 
     // Create Array of possible words
-    var words = ["genie", "mermaid", "charming"];
+    var words = ["lamp", "mermaid", "walt", "beast", "cinderella", "pixar"];
 
+    // (for testing)
+    // var words = ["lamp"];
+     
     // choose one word randomly
-    var randNum = Math.floor(Math.random()*words.length);
-    var chosenWord = words[randNum];
+    var chosenWord = "";
+    function generateWord() {
+        chosenWord = words[Math.floor(Math.random()*words.length)];
+        // console.log("The word is: " + chosenWord);
+    };
+    generateWord();
+    // var randNum = Math.floor(Math.random()*words.length);
+    // var chosenWord = words[randNum];
     console.log("The word is: " + chosenWord);
 
     // Display wins
@@ -19,8 +28,11 @@ $(document).ready(function() {
     // create underscores based on word chosen
     var underscores = [];
     generateUnderscores();
-    $("#currentWord").html(underscores);    
+    // $("#currentWord").html(underscores); 
 
+    // Generate hint
+    hint();
+    
     // get users guess
     $(document).keydown(function(event) {
         // Make sure user can only type letters
@@ -36,11 +48,33 @@ $(document).ready(function() {
     // ***************
     // FUNCTIONS
     function generateUnderscores() {
-            for (var i=0; i < chosenWord.length; i++) {
-                underscores.push("__ ");
-            }
-            return underscores;
-        };
+        for (var i=0; i < chosenWord.length; i++) {
+            underscores.push("__ ");
+            $("#currentWord").html(underscores); 
+        }
+    };
+
+    // Hint Picture
+    function hint() {
+        if (chosenWord == "lamp") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/genie.png" alt="hint"></img>');
+        }
+        else if (chosenWord == "mermaid") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/mermaid.png" alt="hint"></img>');
+        }
+        else if (chosenWord == "walt") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/walt.png" alt="hint"></img>');
+        }
+        else if (chosenWord == "beast") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/beast.png" alt="hint"></img>');
+        }
+        else if (chosenWord == "cinderella") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/cinderella.png" alt="hint"></img>');
+        }
+        else if (chosenWord == "pixar") {
+            $(".hint").html('<img class="hint-image ml-5 mt-4" src="assets/images/pixar.png" alt="hint"></img>');
+        }
+    };
 
     function pressedKey(guess) {
         // If guess is right (-1 is any letter that isn't in word)
@@ -81,7 +115,14 @@ $(document).ready(function() {
         // Reset guesses
         $("#wrongGuesses").html("");
         // Reset the random word
+        generateWord();
+        console.log("new word: " + chosenWord);
         // Reset undersores
+        underscores = [];
+        generateUnderscores();
+        console.log(underscores);
+        // New hint!
+        hint();
     };
 
     function win() {
@@ -94,14 +135,22 @@ $(document).ready(function() {
         // Reset guesses
         $("#wrongGuesses").html("");
         // Reset the random word
+        generateWord();
+        console.log("new word: " + chosenWord);
         // Reset undersores
+        underscores = [];
+        generateUnderscores();
+        console.log(underscores);
+        // New hint!
+        hint();
     };
 
 
 
 
+
 // STILL NEED TO:
-// When user runs out of guesses, reset
+// RESET
 
 
 });
