@@ -146,13 +146,6 @@ $(document).ready(function() {
     };
 
 
-
-
-
-// STILL NEED TO:
-// RESET
-
-
 });
 
 
